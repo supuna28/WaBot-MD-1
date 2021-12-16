@@ -325,12 +325,12 @@ Botkingdom ${prefix}owner`, `Botkingdom © 2021`, templateButtons)
 			      conn.sendMessage(from, { audio: { url: data.nowm }, mimetype: 'audio/mp4' }, { quoted: msg })
 			    }).catch(() => reply(mess.error.api))
 		            break
-                        case prefix+'play':
+                        case prefix+'song':
                             if (args.length < 2) return reply(`Kirim perintah ${command} query\nContoh : ${command} monokrom`)
                             reply(mess.wait)
                             await sendPlay(from, q)
                             break
-			case prefix+'ytmp4': case prefix+'mp4':
+			case prefix+'ytmp4': case prefix+'video':
 			    if (args.length < 2) return reply(`Kirim perintah ${command} link`)
 			    if (!isUrl(args[1])) return reply(mess.error.Iv)
 			    if (!args[1].includes('youtu.be') && !args[1].includes('youtube.com')) return reply(mess.error.Iv)
