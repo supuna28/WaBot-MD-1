@@ -117,7 +117,7 @@ module.exports = async(conn, msg, m, setting) => {
                   url = url.videos[0].url
                   hxz.youtube(url).then(async(data) => {
                   var button = [{ buttonId: `!ytmp3 ${url}`, buttonText: { displayText: `🎵 Audio (${data.size_mp3})` }, type: 1 }, { buttonId: `!ytmp4 ${url}`, buttonText: { displayText: `🎥 Video (${data.size})` }, type: 1 }]
-                  conn.sendMessage(from, { caption: `*Title :* ${data.title}\n*Quality :* ${data.quality}\n*Url :* https://youtu.be/${data.id}`, location: { jpegThumbnail: await getBuffer(data.thumb) }, buttons: button, footer: 'Pilih Salah Satu Button Dibawah⬇️', mentions: [sender] })
+                  conn.sendMessage(from, { caption: `*Title :* ${data.title}\n*Quality :* ${data.quality}\n*Url :* https://youtu.be/${data.id}`, location: { jpegThumbnail: await getBuffer(data.thumb) }, buttons: button, footer: '᳆᳆⃞✪⃟⃟𝐬𝐮𝐩𝐮𝐧★᭄', mentions: [sender] })
                   }).catch((e) => {
                     conn.sendMessage(from, { text: mess.error.api }, { quoted: msg })
                     ownerNumber.map( i => conn.sendMessage(from, { text: `Send Play Error : ${e}` }))
@@ -150,7 +150,7 @@ module.exports = async(conn, msg, m, setting) => {
 		}
 		
 		const templateButtons = [
-			{ callButton: {displayText: `Call Owner!`, phoneNumber: `+6285791458996`} },
+			{ callButton: {displayText: `Call Owner!`, phoneNumber: `+94`} },
 			{ urlButton: { displayText: `Website!`, url : `https://irfanhariyanto.tk`} },
 			{ quickReplyButton: { displayText: `🧑 Owner`, id: `${prefix}owner` } },
 			{ quickReplyButton: { displayText: `👀 runtime`, id: `${prefix}ping` } },
