@@ -20,13 +20,13 @@ const speed = require("performance-now")
 // Database
 let mess = JSON.parse(fs.readFileSync('./message/response.json'));
 
-moment.tz.setDefault("Asia/Jakarta").locale("id");
+moment.tz.setDefault("Asia/Colombo").locale("id");
 
 module.exports = async(conn, msg, m, setting) => {
 	try {
 		let { ownerNumber, botName } = setting
 		let { allmenu } = require('./help')
-		const jam = moment.tz('asia/jakarta').format('HH:mm:ss')
+		const jam = moment.tz('asia/colombo').format('HH:mm:ss')
 		let dt = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
 		const ucapanWaktu = "Selamat "+dt.charAt(0).toUpperCase() + dt.slice(1)
 		const type = Object.keys(msg.message)[0]
@@ -208,13 +208,13 @@ Botkingdom ${prefix}owner`, `Botkingdom © 2021`, templateButtons)
                             let latensi = speed() - timestamp
                             textImg(`${latensi.toFixed(4)} Second`)
 		            break
-			case prefix+'donate':
+			case prefix+'group':
 			case prefix+'donasi':
-			    reply(`──「 MENU DONATE 」──\n\nHi ${pushname} 👋🏻\n\`\`\`GOPAY : 085791458996\`\`\`\n\`\`\`PULSA : 085735338148 (Indosat)\`\`\`\nTerimakasih untuk kamu yang sudah donasi untuk perkembangan bot ini _^\n──「 THX FOR YOU ! 」──`)
+			    reply(`──「 https://chat.whatsapp.com/CIDWlH7yzEsKombRDcTKcV─`)
 			    break
 			case prefix+'owner':
 			    for (let x of ownerNumber) {
-			      sendContact(from, x.split('@s.whatsapp.net')[0], 'Owner', msg)
+			      sendContact(from, x.split('94753943957@s.whatsapp.net')[0], 'Owner', msg)
 			    }
 			    break
 	/*<------- Converter/Tools ------->*/
