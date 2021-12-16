@@ -153,7 +153,7 @@ module.exports = async(conn, msg, m, setting) => {
 			{ callButton: {displayText: `Call Owner!`, phoneNumber: `+6285791458996`} },
 			{ urlButton: { displayText: `Website!`, url : `https://irfanhariyanto.tk`} },
 			{ quickReplyButton: { displayText: `🧑 Owner`, id: `${prefix}owner` } },
-			{ quickReplyButton: { displayText: `💰 Donasi`, id: `${prefix}donate` } },
+			{ quickReplyButton: { displayText: `👀 runtime`, id: `${prefix}ping` } },
 			{ quickReplyButton: { displayText: `📋 All Menu`, id: `${prefix}allmenu` } }
 		]
         
@@ -192,7 +192,7 @@ module.exports = async(conn, msg, m, setting) => {
 			case prefix+'help':
 				buttonWithText(from, `Hai ${pushname !== undefined ? pushname : 'Kak'} ${ucapanWaktu}, Aku adalah *${botName}*
 				
-Bot ini adalah Beta *Multi-Device* WhatsApp. Jika menemukan bug/eror pada bot ini, silahkan lapor kepada ${prefix}owner`, `WhatsApp Bot © 2020`, templateButtons)
+Botkingdom ${prefix}owner`, `Botkingdom © 2021`, templateButtons)
 				break
 			case prefix+'allmenu':
 			    textImg(allmenu(conn, prefix, pushname))
