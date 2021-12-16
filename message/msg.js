@@ -300,10 +300,10 @@ Botkingdom ${prefix}owner`, `Botkingdom © 2021`, templateButtons)
 			    xfar.Tiktok(args[1]).then( data => {
 			      conn.sendMessage(from, {
 				 video: { url: data.medias[0].url },
-				 caption: `${data.title}\n\nKamu bisa mengubahnya menjadi Vidio Tanpa Watermark atau Audio, pencet tombol dibawah untuk mengubahnya!`,
+				 caption: `${data.title}\n\nඅවශ්‍ය මාධ්‍ය තෝරන්න`,
 				 buttons: [{buttonId: `${prefix}tiktoknowm ${args[1]}`, buttonText: { displayText: "Without Watermark" }, type: 1 },
 					   {buttonId: `${prefix}tiktokaudio ${args[1]}`, buttonText: { displayText: "Audio" }, type: 1 }],
-				 footer: "Create by @yannnnn.zz_"
+				 footer: "Create by ᳆⃞✪⃟⃟𝐬𝐮𝐩𝐮𝐧★᭄_"
 			      }, { quoted: msg })
 			    }).catch(() => reply(mess.error.api))
 			    break
